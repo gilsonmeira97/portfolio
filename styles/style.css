@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap');
+
+:root {
+    --green: #64ffda;
+}
+
+* {
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg,#536976,#292e49);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 1100px;
+}
+
+/* Header */
+header {
+    padding: 5px;
+    flex-basis: 40%;
+}
+
+.personal-area {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.personal-area h4 {
+    color: var(--green);
+}
+
+.personal-area h2 {
+    margin: 0px ;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+}
+
+.personal-area p {
+    font-size: 0.9rem;
+}
+
+/*Body*/
+
+main {
+    border: 1px red solid;
+    flex-basis: 60%;
+}
