@@ -27,6 +27,12 @@ body {
 
 /* Header */
 header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
     padding: 5px;
     flex-basis: 40%;
 }
@@ -45,10 +51,58 @@ header {
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 2.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typping 2s steps(36);
 }
 
 .personal-area p {
     font-size: 0.9rem;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+}
+
+.terminal-symbol {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.command {
+    max-width: max-content;
+    display: none;
+    font-weight: 600;
+    color: #1de902;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.command.active {
+    display: inline-block;
+}
+
+header ul li a:hover .command:not(.active){
+    animation: typping 3s steps(72);
+    display: inline-block;
+}
+
+@keyframes typping {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.social-medias {
+    align-self: flex-end;
 }
 
 /*Body*/
