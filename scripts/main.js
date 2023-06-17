@@ -9,7 +9,6 @@ var observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
             var targetId = entry.target.getAttribute("id");
-            console.log(targetId)
             var targetLink = document.querySelector('a[href="#' + targetId + '"] .command ');
             navLinks.forEach(function (link) {
                 if(link.classList.contains("active")) {
