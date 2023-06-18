@@ -281,4 +281,79 @@ section > h2::before {
 }
 
 /* Projects */
+.project-line {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-column-gap: 15px;
+    grid-auto-flow: dense;
+}   
 
+#projects > .project-line:nth-child(odd){
+    grid-template-columns: 60% 40%;
+    margin: 60px 0px;
+}
+
+.img-project {
+    grid-column: 1;
+}
+
+#projects > .project-line:nth-child(odd) .img-project {
+    grid-column: 2;
+}
+
+.img-project img {
+    width: 100%;
+    max-width: 320px;
+}
+
+.project-desc {
+    grid-column: 2;
+}
+
+#projects > .project-line:nth-child(odd) .project-desc {
+    grid-column: 1;
+}
+
+.project-desc p {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+}
+
+.project-tecnologies {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    grid-column: 1 / span 2;
+}
+
+.project-tecnologies span {
+    font-size: 0.8rem;
+    color: var(--green);
+    background-color: #292e49;
+    padding: 5px 10px;
+    border: 1px solid #dddddd50;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.btn-open-project {
+    grid-column: 1 / span 2;
+}
+
+/*Experiences */
+
+.experience-line {
+    margin-bottom: 50px;
+}
+
+.experience-title {
+
+}
+
+.experience-date {
+    
+}
+
+.experience-desc {
+
+}
