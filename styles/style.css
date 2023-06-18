@@ -232,7 +232,7 @@ section > h2::before {
     font-size: 0.9rem;
     position: relative;
     padding-left: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .desc-skills::before,
