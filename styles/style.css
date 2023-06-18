@@ -24,6 +24,7 @@ body {
     justify-content: space-between;
     gap: 1rem;
     width: 1100px;
+    max-width: 100%;
 }
 
 /* Header */
@@ -318,6 +319,7 @@ section > h2::before {
 .project-tecnologies {
     margin-top: 15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: start;
     gap: 25px;
     grid-column: 1 / span 2;
@@ -392,4 +394,57 @@ section > h2::before {
 .bottom-arrow {
     font-size: 3rem;
     opacity: 0.1;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        position: static;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .skills-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-icons {
+        justify-content: space-between;
+    }
+
+    .skills-box:nth-child(2) {
+        border-width: 0px 2.5px 2.5px 2.5px;
+    }
+    
+    .project-tecnologies {
+        gap: 5px;
+    }
+
+    .project-line, 
+    #projects > .project-line:nth-child(odd) {
+        gap: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .img-project img {
+        max-width: 100%;
+    }
+
+    .img-project, .project-desc,
+    #projects > .project-line:nth-child(odd) .img-project,
+    #projects > .project-line:nth-child(odd) .project-desc {
+        grid-column: 1;
+    }
+
+    #projects > .project-line:nth-child(odd) .project-tecnologies {
+        justify-content: start;
+    }
+
+    #experiences {
+    margin-bottom: 50px;
+    }
+
 }

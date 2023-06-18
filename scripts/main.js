@@ -1,5 +1,4 @@
 // Active item effect in menu
-
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll(".command");
 
@@ -30,7 +29,6 @@ sections.forEach(function (section) {
 
 
 // Smooth scroll effect
-
 const menuItems = document.querySelectorAll('.nav-menu a');
 
 menuItems.forEach(item => {
@@ -39,9 +37,17 @@ menuItems.forEach(item => {
 
 function scrollToSection(event) {
   event.preventDefault();
-
   const targetId = this.getAttribute('href').substring(1);
   const targetSection = document.getElementById(targetId);
-
   targetSection.scrollIntoView({ behavior: 'smooth' });
 }
+
+
+// Padding on mobile devices
+if (/Mobi|Android/i.test(navigator.userAgent) || (window.innerWidth < 768)) {
+    let element = document.querySelector('header');
+    let height = element.offsetHeight;
+    let aboutElement = document.querySelector('#about').style = `margin-top: ${window.innerHeight - height}px`
+  } else {
+  }
+  
