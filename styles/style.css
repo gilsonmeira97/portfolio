@@ -3,12 +3,12 @@
 
 :root {
     --green: #64ffda;
-    --gray: #ffffff;
+    --default-color: #ffffff;
 }
 
 * {
     font-family: 'Roboto Mono', sans-serif;
-    color: var(--gray);
+    color: var(--default-color);
 }
 
 body {
@@ -166,7 +166,7 @@ section > h2::before {
 
 .skills-box {
     padding: 25px;
-    border: 2.5px var(--gray) solid;
+    border: 2.5px var(--default-color) solid;
 }
 
 .skills-box:nth-child(2) {
@@ -251,3 +251,34 @@ section > h2::before {
     content: "</h2>";
     bottom: -30px;
 }
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.skills-icons > span {
+    text-align: center;
+    margin: 0px 27px 30px 27px;
+}
+
+.skills-icons > span > h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.skills-icon {
+    margin: 7px 0px;
+    font-size: 3rem
+}
+
+.skills-icon-s {
+    font-size: 2.9rem
+}
+
+/* Projects */
+
