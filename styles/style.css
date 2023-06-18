@@ -108,11 +108,6 @@ header ul li a:hover .command:not(.active){
     font-size: 1.6rem;
 }
 
-.social-icon i:hover {
-    transition: all 1s linear;
-    color: var(--green);
-}
-
 /*Body*/
 
 main {
@@ -303,6 +298,7 @@ section > h2::before {
 
 .img-project img {
     width: 100%;
+    height: 100%;
     max-width: 320px;
 }
 
@@ -322,9 +318,13 @@ section > h2::before {
 .project-tecnologies {
     margin-top: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 25px;
     grid-column: 1 / span 2;
+}
+
+#projects > .project-line:nth-child(odd) .project-tecnologies {
+    justify-content: end;
 }
 
 .project-tecnologies span {
@@ -342,18 +342,54 @@ section > h2::before {
 
 /*Experiences */
 
+#experiences {
+    margin-bottom: 120px;
+}
+
 .experience-line {
     margin-bottom: 50px;
 }
 
 .experience-title {
-
+    font-family: 'Poppins', sans-serif;
 }
 
 .experience-date {
-    
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.5;
+    padding: 10px 0px;
+    font-size: 0.8rem;
 }
 
 .experience-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
 
+.pdf-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-area span {
+    font-size: 1.2rem;
+    opacity: 0.5;
+
+}
+
+.pdf-icon {
+    margin-left: 5px;
+    font-size: 2rem;
+}
+
+.social-icon i:hover, .pdf-icon:hover {
+    transition: all 1s linear;
+    color: var(--green);
+}
+
+.bottom-arrow {
+    font-size: 3rem;
+    opacity: 0.1;
 }

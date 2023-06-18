@@ -1,15 +1,17 @@
-var sections = document.querySelectorAll("section");
-var navLinks = document.querySelectorAll(".command");
+// Active item effect in menu
 
-var options = {
-    rootMargin: "-50% 0px -50% 0px" // Define a margem de interseção para ativar a classe
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll(".command");
+
+const options = {
+    rootMargin: "-50% 0px -50% 0px" // Define a margem de interseção para atilet a classe
 };
 
-var observer = new IntersectionObserver(function (entries, observer) {
+let observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-            var targetId = entry.target.getAttribute("id");
-            var targetLink = document.querySelector('a[href="#' + targetId + '"] .command ');
+            let targetId = entry.target.getAttribute("id");
+            let targetLink = document.querySelector('a[href="#' + targetId + '"] .command ');
             navLinks.forEach(function (link) {
                 if(link.classList.contains("active")) {
                     link.classList.remove("active");
@@ -25,3 +27,21 @@ var observer = new IntersectionObserver(function (entries, observer) {
 sections.forEach(function (section) {
     observer.observe(section);
 });
+
+
+// Smooth scroll effect
+
+const menuItems = document.querySelectorAll('.nav-menu a');
+
+menuItems.forEach(item => {
+  item.addEventListener('click', scrollToSection);
+});
+
+function scrollToSection(event) {
+  event.preventDefault();
+
+  const targetId = this.getAttribute('href').substring(1);
+  const targetSection = document.getElementById(targetId);
+
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
