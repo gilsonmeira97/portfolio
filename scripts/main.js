@@ -41,13 +41,3 @@ function scrollToSection(event) {
   const targetSection = document.getElementById(targetId);
   targetSection.scrollIntoView({ behavior: 'smooth' });
 }
-
-
-// Padding on mobile devices
-if (/Mobi|Android/i.test(navigator.userAgent) || (window.innerWidth < 768)) {
-    let element = document.querySelector('header');
-    let height = element.offsetHeight;
-    let aboutElement = document.querySelector('#about').style = `margin-top: ${window.innerHeight - height}px`
-  } else {
-  }
-  

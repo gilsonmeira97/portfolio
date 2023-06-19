@@ -400,11 +400,17 @@ section > h2::before {
 
     header {
         position: static;
+        flex-basis: auto;
+        grid-template-rows: 1fr 1fr 8fr;
     }
 
     .container {
         flex-direction: column;
         padding: 8px;
+    }
+
+    #about {
+        margin-top: 40px;
     }
 
     .skills-boxes {
